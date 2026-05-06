@@ -55,11 +55,11 @@ if image_base64:
 st.markdown("<h3 style='text-align: center;font-size: 16px;'>Fig 1: The histogram depicts the value spread of the parameters data generated.The x-axis represents the parameter values, while the y-axis indicates the frequency of each value. This visualization provides insights into the range and distribution of the generated parameters, helping to identify any potential biases or anomalies in the data generation process.</h3>", unsafe_allow_html=True)
 
 
-st.write("<h2>2. Finding a polynomial as a function of temperature</h2>", unsafe_allow_html=True)
+st.write("<h2>2. Finding a polynomial as a funciton of temperature</h2>", unsafe_allow_html=True)
 
 st.write("The polynomial function was generated using the numpy library in Python. The coefficients of the polynomial were determined through a fitting process. The generated polynomial function can be used for further analysis or modeling tasks. [[Colab File]](https://colab.research.google.com/drive/1GrvoyQqBbBhPa4e7cMgTDY4QXbsX4PPH?usp=sharing)" )
 
-st.write("<h2>3. (a) Simulating each case: Batch Sweep</h2>", unsafe_allow_html=True)
+st.write("<h2>3. Simulating each case</h2>", unsafe_allow_html=True)
 
 st.write("The simulation was performed using the COMSOL Multiphysics software. It was found that there were different ways to go about simulating 5K differnt cases, first one being parametric sweep in one comsol file, second is using Matlab, and the last is using simple python." \
 "\nWe chose the last option which is using python. For this partcular method, it's required to generate a .txt file for each input, hence using another python code, generated about 5000  geometry case files, gave them as input and simulated each case, generating .mph file for each.\n"
@@ -74,11 +74,3 @@ st.write("So, the first step is to create a template file with the respective va
 st.write("\nIt was after the simulation we realised the the export of each case is not being done, but each case generated had a .mph file respective to it's parameters and the computation has been performed successfully.")
 
 st.write("So, at this point we decided to utilise matlab to extract the results from each .mph file, as it's mentioned that comsol files can be loaded in matlab via COMSOL LiveLink")
-
-
-st.write("<h2>3. (b) Simulating each case: Parametric Sweep</h2>", unsafe_allow_html=True)
-
-st.write("After a failed attemot at extracting the results from the .mph files, we decided to use the parametric sweep method in comsol. The parametric sweep method allows us to define a range of values for a parameter sucha as the width, height of TE and automatically run simulations for each value in that range. This approach is particularly useful when dealing with a large number of cases, as it eliminates the need to manually create and manage individual simulation files for each case.\n" )
-st.write("The arametric sweep comes under the study node in comsol, and we can define the parameters to sweep over, and then run the simulation. The results can be exported to a file for further analysis.\n The probes were defined at the ohmic contacts to measure the voltage generated for the specific cominations." )
-st.write("It took about 24 hours for the parametric sweep to complete, and the results were exported to a .csv file for further analysis. The results were then analysed using python.\n")
-

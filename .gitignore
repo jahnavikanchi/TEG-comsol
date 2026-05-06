@@ -1,0 +1,5 @@
+
+# Ignore large video/project files
+views/E-project week/
+*.mov
+*.mp4

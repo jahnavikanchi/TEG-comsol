@@ -126,32 +126,23 @@ st.markdown("""
     margin: 2.5rem auto 0 auto;
 }
 
-div[data-testid="stPageLink"] {
-    background: rgba(255, 255, 255, 0.14);
-    border: 1px solid rgba(255, 255, 255, 0.22);
-    border-radius: 24px;
-    padding: 1.6rem 1.2rem;
-    backdrop-filter: blur(8px);
-    transition: all 0.3s ease;
-    text-align: center;
-    min-height: 120px;
+div[data-testid="column"] {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
 }
 
-div[data-testid="stPageLink"]:hover {
-    transform: translateY(-6px);
-    background: rgba(255, 255, 255, 0.22);
-    box-shadow: 0 10px 24px rgba(0,0,0,0.20);
+div[data-testid="stPageLink"] {
+    width: 100% !important;
+    min-width: 100% !important;
+    box-sizing: border-box;
 }
 
 div[data-testid="stPageLink"] a {
-    color: white !important;
-    font-size: 1.55rem !important;
-    font-weight: 800 !important;
-    text-decoration: none !important;
-    width: 100%;
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 .nav-card-text {

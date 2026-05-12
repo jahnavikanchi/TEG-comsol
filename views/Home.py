@@ -125,7 +125,7 @@ st.markdown("""
     max-width: 1100px;
     margin: 2.5rem auto 0 auto;
 }
-
+            
 div[data-testid="column"] {
     display: flex;
     flex-direction: column;
@@ -135,16 +135,44 @@ div[data-testid="stPageLink"] {
     width: 100% !important;
     min-width: 100% !important;
     box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 24px;
+
+    padding: 1.6rem 1.2rem;
+    min-height: 120px;
+
+    backdrop-filter: blur(8px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    transition: all 0.3s ease;
+}
+
+div[data-testid="stPageLink"]:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.20);
 }
 
 div[data-testid="stPageLink"] a {
     width: 100% !important;
     height: 100% !important;
+
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-}
 
+    color: white !important;
+    font-size: 1.55rem !important;
+    font-weight: 800 !important;
+    text-decoration: none !important;
+}
 .nav-card-text {
     color: #E6EFE9;
     text-align: center;

@@ -2,7 +2,6 @@ import streamlit as st
 
 st.set_page_config(
     page_title="Project Introduction",
-    page_icon="⚡",
     layout="wide"
 )
 
@@ -257,7 +256,7 @@ st.markdown(
     '<div class="section-text">'
         'Thermoelectric generators offer a promising route for sustainable energy'
         'recovery, especially in systems where waste heat is readily available.'
-        'Improving their geometry can directly influence device efficiency and practical'
+        ' Improving their geometry can directly influence device efficiency and practical'
         'performance.'
         '<br><br>'
         'This project shows how materials science, numerical simulation, and machine'

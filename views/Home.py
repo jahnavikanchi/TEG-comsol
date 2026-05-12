@@ -179,7 +179,7 @@ st.markdown(
 # -----------------------------
 st.markdown('<div class="nav-section">', unsafe_allow_html=True)
 
-col1, col2, col3 = st.columns(3, gap="large")
+col1, col2, col3 = st.columns([1, 1, 1], gap="medium")
 
 with col1:
     st.page_link(

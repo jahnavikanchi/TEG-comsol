@@ -160,7 +160,7 @@ members = [
     },
     {
         "name": "Kanchi Jahnavi",
-        "role": "The Jack",
+        "role": "Website Developer - The Jack",
         "image": "views/Images/Jahnavi_pfp.jpg",
         "bio": "Hello! I am Kanchi Jahnavi a.k.a ‘The Jack’. I am currently pursuing a master's degree in the field of Functional materials and machine learning. I come from India where I pursued my Bachelor’s degree in the field of materials science and engineering. As an undergrad, I have worked on various projects related to the field of nanoscience, magnetic shielding and battery enhancement. I have delved into machine learning as a personal interest during my studies. The idea of combining the fields of machine learning and materials science has always fascinated me. So, here it goes, my step towards the future for bringing in the fascinating fusion."
     }

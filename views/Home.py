@@ -121,65 +121,62 @@ st.markdown("""
     font-weight: 700;
 }
 
-.nav-section {
+.nav-grid {
     max-width: 1100px;
     margin: 2.5rem auto 0 auto;
-}
-            
-div[data-testid="column"] {
-    display: flex;
-    flex-direction: column;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
 }
 
-div[data-testid="stPageLink"] {
-    width: 100% !important;
-    min-width: 100% !important;
-    box-sizing: border-box;
+.nav-card {
+    min-height: 150px;
+
+    padding: 1.8rem 1.4rem;
+
+    border-radius: 24px;
 
     background: rgba(255, 255, 255, 0.14);
     border: 1px solid rgba(255, 255, 255, 0.22);
-    border-radius: 24px;
-
-    padding: 1.6rem 1.2rem;
-    min-height: 120px;
 
     backdrop-filter: blur(8px);
 
+    text-decoration: none !important;
+
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     text-align: center;
 
     transition: all 0.3s ease;
 }
 
-div[data-testid="stPageLink"]:hover {
+.nav-card:hover {
     transform: translateY(-6px);
     background: rgba(255, 255, 255, 0.22);
     box-shadow: 0 10px 24px rgba(0,0,0,0.20);
 }
 
-div[data-testid="stPageLink"] a {
-    width: 100% !important;
-    height: 100% !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    color: white !important;
-    font-size: 1.55rem !important;
-    font-weight: 800 !important;
-    text-decoration: none !important;
+.nav-title {
+    color: white;
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
 }
-.nav-card-text {
+
+.nav-text {
     color: #E6EFE9;
-    text-align: center;
-    margin-top: 0.8rem;
     font-size: 1rem;
-    line-height: 1.6;
-    padding: 0 0.5rem;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 900px) {
+    .nav-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 </style>
@@ -205,47 +202,24 @@ st.markdown(
 # -----------------------------
 # Navigation Cards
 # -----------------------------
-st.markdown('<div class="nav-section">', unsafe_allow_html=True)
+st.markdown(
+    '<div class="nav-grid">'
 
-col1, col2, col3 = st.columns([1, 1, 1], gap="medium")
+    '<a class="nav-card" href="/Our_Material" target="_self">'
+    '<div class="nav-title">Our Material: Ag₂Se</div>'
+    '<div class="nav-text">n-type thermoelectric material used in the device design.</div>'
+    '</a>'
 
-with col1:
-    st.page_link(
-        "views/Our_Material.py",
-        label="Our Material: Ag₂Se",
-    )
+    '<a class="nav-card" href="/Project" target="_self">'
+    '<div class="nav-title">About Project</div>'
+    '<div class="nav-text">Unique geometry combinations generated using Python.</div>'
+    '</a>'
 
-    st.markdown(
-        '<div class="nav-card-text">'
-        'n-type thermoelectric material used in the device design.'
-        '</div>',
-        unsafe_allow_html=True
-    )
+    '<a class="nav-card" href="/ML_Results" target="_self">'
+    '<div class="nav-title">ML Optimisation</div>'
+    '<div class="nav-text">Simulation results used for data-driven geometry optimisation.</div>'
+    '</a>'
 
-with col2:
-    st.page_link(
-        "views/Project.py",
-        label="About Project",
-    )
-
-    st.markdown(
-        '<div class="nav-card-text">'
-        'Unique geometry combinations generated using Python.'
-        '</div>',
-        unsafe_allow_html=True
-    )
-
-with col3:
-    st.page_link(
-        "views/ML_Results.py",
-        label="ML Optimisation",
-    )
-
-    st.markdown(
-        '<div class="nav-card-text">'
-        'Simulation results used for data-driven geometry optimisation.'
-        '</div>',
-        unsafe_allow_html=True
-    )
-
-st.markdown('</div>', unsafe_allow_html=True)
+    '</div>',
+    unsafe_allow_html=True
+)

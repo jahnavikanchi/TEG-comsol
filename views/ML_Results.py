@@ -6,6 +6,7 @@ from pathlib import Path
 st.set_page_config(page_title="Machine Learning Results", layout="wide")
 
 
+
 # -----------------------------
 # Helpers
 # -----------------------------
@@ -245,9 +246,6 @@ render_section(
 # -----------------------------
 # Section 2
 # -----------------------------
-st.markdown('<div class="section-card"><div class="section-title">2. Model Evaluation</div>', unsafe_allow_html=True)
-st.markdown('<div class="small-caption">Table 1: Evaluation metrics and prediction snapshot.</div>', unsafe_allow_html=True)
-
 eval_metrics_df = pd.DataFrame({
     "Predicted_Power_output": [12.657933, 1.763126, 1.763126, 1.291263, 14.271257],
     "Predicted_Efficiency": [0.205946, 0.891846, 0.620642, 0.605060, 0.843168]

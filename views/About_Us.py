@@ -5,6 +5,7 @@ import html
 
 st.set_page_config(page_title="About Us", layout="wide")
 
+
 # -----------------------------
 # Helpers
 # -----------------------------
@@ -14,6 +15,8 @@ def img_to_base64(path):
         return None
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
+
+
 
 
 # -----------------------------
